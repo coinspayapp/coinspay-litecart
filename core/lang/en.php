@@ -136,7 +136,7 @@ return array(
 	'admin_event_cancelled' => 'Invoice cancelled',
 	'admin_event_cancelled_partial' => 'Invoice cancelled partially paid',
 	'admin_cancel_statuses' => 'Order cancel statuses',
-	'admin_cancel_statuses_help' => 'When you put an order into one of these statuses, the module cancels its open invoice within 5 minutes, and the buyer can no longer pay it. A payment that still comes gives the event "Paid order that the shop cancelled". Leave empty for every status in the Cancelled state.',
+	'admin_cancel_statuses_help' => 'When you put an order into one of these statuses, the module cancels its open invoice at the next run of its job (every 5 minutes with a cron job, otherwise about once an hour), and the buyer can no longer pay it. A payment that still comes gives the event "Paid order that the shop cancelled". Leave empty for every status in the Cancelled state.',
 	'admin_total' => 'Minimum order total',
 	'admin_total_help' => 'In the store currency. Leave empty for no minimum.',
 	'admin_geo_zone' => 'Geo zone',

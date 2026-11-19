@@ -10,7 +10,7 @@ class job_coinspay {
 	public $name = 'CoinsPay';
 	public $description = 'Checks open CoinsPay invoices: payments whose webhook did not arrive, invoices of cancelled orders.';
 	public $author = 'CoinsPay';
-	public $version = '0.1.0';
+	public $version = '0.1.1';
 	public $website = 'https://coinspay.app';
 	public $priority = 0;
 

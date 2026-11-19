@@ -25,7 +25,7 @@ More than 30 coins and tokens on TRON, Ethereum, BNB Smart Chain, Solana, Bitcoi
 
 - Each invoice event maps to an order status of your choice. A comment with amounts, coins and transaction hashes goes to the order at every event, hidden from the customer.
 - An invoice that expires unpaid cancels the order, and its reserved stock is free again.
-- When you put an order into a cancel status, the module cancels its open invoice within 5 minutes, so the buyer can no longer pay it.
+- When you put an order into a cancel status, the module cancels its open invoice at the next run of its job (every 5 minutes with a cron job, otherwise about once an hour), so the buyer can no longer pay it.
 - If a payment does not match the order total, or arrives for an order you cancelled, the order gets the "Crypto payment review" status and a comment for you to review.
 - A buyer who closed the payment page can pay later: the "order placed" page shows "Go to payment" while the invoice is open. A buyer who paid on another device gets the "order placed" page of the order when they come back.
 - Webhooks are signed and checked. If they do not arrive, a job of LiteCart asks CoinsPay about open invoices.
@@ -103,6 +103,10 @@ docker run --rm -v "$P:/app" -w /app --entrypoint php composer:2 bin/build.php
 `phpcs` checks compatibility with PHP 5.6 and later.
 
 ## Changelog
+
+### 0.1.1
+
+- The help of "Order cancel statuses" and the installation guides now say when the invoice of a cancelled order is cancelled: at the next run of the job "CoinsPay", every 5 minutes with a cron job, otherwise about once an hour.
 
 ### 0.1.0
 

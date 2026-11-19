@@ -46,7 +46,8 @@ invoice expired" and the like it means "the same as Paid". A comment with amount
 transaction hashes goes to the order at every event, hidden from the customer.
 
 When you put an order into one of the "Order cancel statuses", the module cancels its open invoice
-within 5 minutes, and the buyer can no longer pay it.
+at the next run of the job "CoinsPay" (every 5 minutes with a cron job, otherwise about once an
+hour), and the buyer can no longer pay it.
 
 ## Test mode
 
