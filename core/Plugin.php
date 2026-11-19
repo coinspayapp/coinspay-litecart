@@ -8,7 +8,7 @@ if (!defined('PLATFORM_NAME') && !defined('COINSPAY_TESTS')) {
 
 class CoinsPay_Plugin {
 
-	const VERSION = '0.1.1';
+	const VERSION = '0.1.2';
 
 	/** @var CoinsPay_Store */
 	public $store;

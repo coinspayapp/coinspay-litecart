@@ -11,7 +11,7 @@ class pm_coinspay {
 	public $name = 'CoinsPay';
 	public $description = '';
 	public $author = 'CoinsPay';
-	public $version = '0.1.1';
+	public $version = '0.1.2';
 	public $support_link = 'https://coinspay.app/plugins/litecart';
 	public $website = 'https://coinspay.app';
 	public $priority = 0;

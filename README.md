@@ -46,7 +46,7 @@ The fee is as low as 0.3% of each payout: the rate goes down as the monthly turn
 
 On install the module adds two order statuses, "Awaiting crypto payment" (reserves the stock) and "Crypto payment review", its tables `coinspay_invoice` and `coinspay_kv`, and the job "CoinsPay" under Modules → Jobs.
 
-The archive includes the installation guide in [English](docs/install-en.md) and [Russian](docs/install-ru.md).
+The archive includes the installation guide in [English](docs/install-en.md) (also as its README.md) and [Russian](docs/install-ru.md), and the [upgrade steps](docs/upgrade-en.md) as UPGRADE.md.
 
 ## Configuration
 
@@ -103,6 +103,10 @@ docker run --rm -v "$P:/app" -w /app --entrypoint php composer:2 bin/build.php
 `phpcs` checks compatibility with PHP 5.6 and later.
 
 ## Changelog
+
+### 0.1.2
+
+- The archive follows the layout of the LiteCart add-on store: README.md with the installation guide, UPGRADE.md and LICENSE.md at its root. The module itself is the same as in 0.1.1.
 
 ### 0.1.1
 

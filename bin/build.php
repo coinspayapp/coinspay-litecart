@@ -5,6 +5,9 @@
  *   (the core in includes/coinspay, the payment module, the job, the pages, the icon), the
  *   installation guides and the license; and dist/build/ with the same files unpacked.
  *
+ * The layout is the one of the LiteCart add-on store (litecart.net, "How To Pack Your Add-on"):
+ * README.md with the installation guide, UPGRADE.md and LICENSE.md at the root, docs/ beside them.
+ *
  *   php bin/build.php   (PHP with the zip extension, e.g. the composer:2 image)
  */
 $root = dirname(__DIR__);
@@ -50,7 +53,14 @@ foreach (array('includes/coinspay', 'includes/coinspay/lang', 'includes/coinspay
 mkdir($build . '/docs', 0755, true);
 copy($root . '/docs/install-en.md', $build . '/docs/install-en.md');
 copy($root . '/docs/install-ru.md', $build . '/docs/install-ru.md');
-copy($root . '/LICENSE', $build . '/LICENSE');
+copy($root . '/LICENSE', $build . '/LICENSE.md');
+// The store wants the installation guide in README.md at the root of the archive.
+file_put_contents($build . '/README.md', rtrim(file_get_contents($root . '/docs/install-en.md'))
+	. "
+
+The same guide in Russian: docs/install-ru.md. How to upgrade: UPGRADE.md.
+");
+copy($root . '/docs/upgrade-en.md', $build . '/UPGRADE.md');
 
 $zip = new ZipArchive();
 if ($zip->open($zipFile, ZipArchive::CREATE | ZipArchive::OVERWRITE) !== true) {
