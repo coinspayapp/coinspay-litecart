@@ -40,7 +40,7 @@ The fee is as low as 0.3% of each payout: the rate goes down as the monthly turn
 
 ## Installation
 
-1. Download `coinspay-litecart.zip` from the [releases](https://github.com/coinspayapp/coinspay-litecart/releases/latest).
+1. Download `coinspay-litecart.zip` from the [releases](https://github.com/coinspayapp/coinspay-litecart/releases/latest) or the [LiteCart add-on store](https://www.litecart.net/en/addons/914/coinspay-crypto-payments-usdt-btc-eth).
 2. Copy the contents of its `public_html` folder into the root folder of your store (the one with `index.php`), keeping the folders. Nothing of LiteCart is replaced: the module adds `includes/coinspay/`, `includes/modules/payment/pm_coinspay.inc.php`, `includes/modules/jobs/job_coinspay.inc.php`, four `pages/coinspay_*.inc.php` and `images/payment/coinspay.png`.
 3. In the admin open Modules → Payment, find CoinsPay and press Install, then Save.
 
